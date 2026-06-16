@@ -97,7 +97,8 @@ nav a:hover{
 ======================================== */
 
 .hero{
-
+   
+    padding-top:90px;
     height:100vh;
 
     background:
