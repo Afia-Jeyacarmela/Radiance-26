@@ -187,15 +187,10 @@ document.querySelectorAll("#navLinks a").forEach(link => {
     });
 });
 
-document.addEventListener("click", function(event){
+const navLinks = document.querySelectorAll("nav ul a");
 
-    const navLinks = document.getElementById("navLinks");
-    const menuToggle = document.querySelector(".menu-toggle");
-
-    if(
-        !navLinks.contains(event.target) &&
-        !menuToggle.contains(event.target)
-    ){
-        navLinks.classList.remove("show");
-    }
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("show");
+    });
 });
