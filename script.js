@@ -173,3 +173,9 @@ for(let i=0;i<250;i++){
 
     starfield.appendChild(star);
 }
+
+function toggleMenu(){
+    document
+    .getElementById("navLinks")
+    .classList.toggle("show");
+}
