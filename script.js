@@ -175,7 +175,27 @@ for(let i=0;i<250;i++){
 }
 
 function toggleMenu(){
-    document
-    .getElementById("navLinks")
-    .classList.toggle("show");
+    document.getElementById("navLinks")
+            .classList.toggle("show");
 }
+
+
+document.querySelectorAll("#navLinks a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("navLinks")
+                .classList.remove("show");
+    });
+});
+
+document.addEventListener("click", function(event){
+
+    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.querySelector(".menu-toggle");
+
+    if(
+        !navLinks.contains(event.target) &&
+        !menuToggle.contains(event.target)
+    ){
+        navLinks.classList.remove("show");
+    }
+});
