@@ -130,14 +130,15 @@ nav a:hover{
 }
 
 .radiance-title{
-
-    font-size:3rem;
+    font-size:clamp(2rem, 8vw, 7rem);
     font-weight:900;
 
     text-shadow:
-    0 0 10px #fff,
-    0 0 20px #ddd,
-    0 0 30px #aaa;
+        0 0 10px #fff,
+        0 0 20px #ddd,
+        0 0 30px #aaa;
+
+    white-space:nowrap;
 }
 
 .youthfest{
